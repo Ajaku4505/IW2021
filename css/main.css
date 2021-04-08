@@ -1,0 +1,285 @@
+@charset "utf-8";
+
+
+.wf-mplus1p { font-family: "M PLUS 1p"; }
+
+:root {
+  --this-site-bold: 900;
+}
+
+.element {
+  font-weight: var(--this-site-bold);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-feature-settings: "palt"1;
+    letter-spacing: 0.5px;
+    vertical-align: bottom;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+#loading {
+    position: fixed;
+    z-index: 10000000;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    transition: all .8s cubic-bezier(.445, .05, .55, .95) 0ms;
+}
+
+.loaded {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.ico-svg-03 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+}
+
+.ico-svg-03 path,
+.ico-svg-03 polygon {
+	fill: #aaa;
+	stroke: transparent;
+}
+
+.ico-svg-03 path,
+.ico-svg-03 polygon {
+	-webkit-animation: stroke 3.5s ease-in-out forwards;
+	animation: stroke 3.5s ease-in-out forwards;
+	stroke: #25E4F0;
+	stroke-dasharray: 1800;
+	stroke-dashoffset: 0;
+	stroke-width: 1;
+}
+
+@-webkit-keyframes stroke {
+	0% {
+		fill: #aaa;
+		stroke-dashoffset: 1800;
+	}
+	20% {
+		fill: transparent;
+	}
+	70% {
+		fill: transparent;
+	}
+	100% {
+    fill: #25E4F0;
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes stroke {
+	0% {
+		fill: #aaa;
+		stroke-dashoffset: 1800;
+	}
+	20% {
+		fill: transparent;
+	}
+	70% {
+		fill: transparent;
+	}
+	100% {
+		fill: #25E4F0;
+		stroke-dashoffset: 0;
+	}
+}
+
+body {
+    background: black;
+    color: white;
+    background: url(../img/IW2021_bg.jpg);
+    background-size: cover;
+}
+
+dt {
+    font-size: 2.5vw;
+    text-shadow: 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000;
+}
+
+dd {
+    font-size: 3vw;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.ico-svg-03 {
+	width: 80%;
+}
+
+.main--contents {
+    margin: 1rem;
+    overflow: hidden;
+}
+
+/* ヘッダー */
+
+.header--area {
+    text-align: center;
+    font-size: 2vw;
+}
+
+.header--area > h1 {
+    background: rgb(237,242,171);
+    background: linear-gradient(180deg, rgba(237,242,171,1) 0%, rgba(218,204,113,1) 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* メインエリア */
+
+.main--area {
+    display: flex;
+}
+
+.herf--area {
+    margin: 2rem;
+}
+
+.herf--area.left {
+    width: 60%;
+}
+
+.herf--area.left .logo_img {
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.herf--area.left .logo_img img {
+    width: 90%;
+}
+
+.herf--area.right {
+    width: 40%;
+}
+
+.herf--area .car--spec {
+    height: 100%;
+    background: rgba(255,255,255,.5);
+    padding: 2vw;
+}
+
+.frame {
+    border-right: 10px solid;
+    border-left: 10px solid;
+    border-image: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 25%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 75%, rgba(255,255,255,1) 100%);
+    border-image-slice: 1;
+    border-bottom: solid 10px #FFF;
+    border-top: solid 10px #FFF;
+}
+
+.slick01 img {
+    width: 100%;
+    height: auto;
+}
+
+/* footer */
+
+.footer--area > h2 {
+    text-align: center;
+    font-size: 5.5vw;
+}
+
+.discription--area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.state {
+    font-size: 2.3vw;
+}
+
+.state-en {
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.money {
+    font-size: 4vw;
+    transform: scale(0.5, 1);
+    padding-left: 3vw;
+    border-left: solid 20px #FFF
+}
+
+@media screen and (max-width: 768px) {
+
+	dt {
+	    font-size: 8vw;
+	}
+
+	dd {
+	    font-size: 8.5vw;
+	    margin-bottom: 1rem;
+	}
+
+	.main--contents {
+	    margin: .5rem;
+	}
+
+	.main--area {
+	    display: block;
+	}
+
+	.herf--area.left,
+	.herf--area.right {
+	    width: 100%;
+	}
+
+	.herf--area {
+	    margin: 0;
+	    padding: 1rem;
+	}
+
+	.herf--area.left .logo_img {
+	    text-align: center;
+	    padding-top: 1rem;
+	}
+
+	.frame {
+	    border-right: 5px solid;
+	    border-left: 5px solid;
+	    border-image: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 25%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 75%, rgba(255,255,255,1) 100%);
+	    border-image-slice: 1;
+	    border-bottom: solid 5px #FFF;
+	    border-top: solid 5px #FFF;
+	}
+
+	.discription--area {
+	    display: block;
+	}
+
+	.state {
+	    font-size: 3.5vw;
+	    text-align: center;
+	    margin: 1rem 0;
+	}
+
+	.money {
+	    font-size: 6vw;
+	    transform: scale(1);
+	    padding-left: 0;
+	    border-left: none;
+	    text-align: center;
+	}
+
+}
+
+/*
+
+次の車は、ホンダ車のワゴンになります。
+どうぞよろしくお願いします。
+
+*/
